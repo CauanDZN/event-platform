@@ -7,7 +7,6 @@ const GET_LESSONS_QUERY = gql`
       title
       }
     }
-  }
 `
 
 interface Lesson {
@@ -21,7 +20,7 @@ function App() {
   return (
     <ul>
       {data?.lessons.map(lesson => {
-        return <li key={lesson.id}>{lesson.title}</li>
+        return <li className="text-zinc-100" key={lesson.id}>{lesson.title}</li>
       })}
     </ul>
   )
